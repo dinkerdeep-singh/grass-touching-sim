@@ -5,7 +5,7 @@ function BaseComponent() {
   const [grass, setGrass] = useState("");
 
   async function updateGrass() {
-    const data = await axios.get("http://localhost:3000/api/v1/image");
+    const data = await axios.get("https://grass-touching-sim-api.vercel.app/api/v1/image");
     console.log(data.data.image.id)
     setGrass(data.data.image.image);
   }
